@@ -1,17 +1,7 @@
 const express = require("express");
 require("dotenv").config();
 const ECPayPayment = require("ecpay_aio_nodejs");
-
-const options = {
-  OperationMode: "Test",
-  MercProfile: {
-    MerchantID: `${process.env.MerchantID}`,
-    HashKey: `${process.env.HASH_KEY}`,
-    HashIV: `${process.env.HASH_IV}`,
-  },
-  IgnorePayment: [],
-  IsProjectContractor: false,
-};
+const options = require('./config/ecpay_options.js'); 
 
 const ecpayInstance = new ECPayPayment(options);
 
