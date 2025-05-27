@@ -46,7 +46,7 @@ app.post("/create-order", (req, res) => {
     TotalAmount: "100",
     TradeDesc: "測試交易",
     ItemName: "測試商品",
-    ReturnURL: `${process.env.BASE_URL}/receive`,
+    ReturnURL: `https://www.ecpay.com.tw`,
   };
 
   // 使用正確的實例調用方法
